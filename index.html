@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>The K's Kitchen</h1>
+       <!-- <img src="images/logo.png" alt="Khushi's Kitchen Logo">-->
+    </header>
+
+    <!--<nav>
+        <img src="images/logo2.png" alt="Khushi's Kitchen Logo" class="logo">
+        <a href="#contact">Contact</a>
+        <a href="#time">Time</a>  
+        <a href="#bookings">Bookings</a>
+        <a href="#home">Home</a>
+    </nav>-->
+    
+    <nav>
+        <img src="images/logo2.png" alt="Khushi's Kitchen Logo" class="logo">
+        
+        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+        <a href="#timings" onclick="scrollToSection('timings')">Timings</a>
+        <a href="#gallery" onclick="scrollToSection('gallery')">Gallery</a>
+        <a href="#bookings" onclick="scrollToSection('bookings')">Bookings</a>
+        <a href="#home" onclick="scrollToSection('home')">Home</a>
+    </nav>
+
+        <section id="home">
+            <h2 >Welcome to Khushii's-Kitchen!!</h2>
+
+            <p>Indulge your senses in a culinary journey that promises to delight your taste buds. 
+                At Khushi's Kitchen, we take pride in crafting exquisite dishes using the finest ingredients and time-honored recipes. 
+                Our passion for food is reflected in every dish we serve, bringing you a taste of joy and happiness.</p>
+    
+            <p>Whether you're a connoisseur of traditional flavors or seeking innovative and modern creations, Khushi's Kitchen is the perfect destination. Join us for a dining experience that goes beyond the ordinary, where every meal is a celebration of flavors, aromas, and the joy of good company.</p>
+    
+            <img src="images/bg.jpg" alt="Restaurant Interior">
+
+        </section>
+        
+        
+
+
+        <section id="bookings">
+                <h2>Book a Table</h2>
+                <form id="bookingForm" onsubmit="submitForm(event)">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+        
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" name="time" required>
+        
+                    <button type="submit">Book Now</button>
+                </form>
+        </section>
+    
+      
+        <section id="gallery">
+            <h2>Food-Gallery</h2>
+            <div class="image-grid">
+                <img src="images/food1.jpg" alt="Food Image 1">
+                <img src="images/food2.jpg" alt="Food Image 2">
+                <img src="images/food3.jpg" alt="Food Image 3">
+                <img src="images/img1.jpg" alt="Food Image 4">
+                <img src="images/img2.jpg" alt="Food Image 5">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+
+       <!-- <section>
+            <h3>Food-Gallery</h3>
+        <div>
+            <img src="images/food1.jpg" alt="Food Image 1">
+            <img src="images/food2.jpg" alt="Food Image 2">
+            <img src="images/food3.jpg" alt="Food Image 3">
+        </div>
+
+        </section>-->
+        <!--<h3>Special Dishes</h3>
+        <div>
+            <img src="images/food1.jpg" alt="Food Image 1">
+            <img src="images/food2.jpg" alt="Food Image 2">
+            <img src="images/food3.jpg" alt="Food Image 3">-->
+            <!-- Add more images as needed -->
+       <!-- </div> -->
+
+
+       <section id="timings">
+        <h2>Opening Hours</h2>
+        <p>Monday to Sunday: 12:00 PM - 10:00 PM</p>
+    </section>
+      
+    <section id="contact">
+       
+        <h2>Contact Us</h2>
+        <p><b> Email:</b> info@kskitchen.com<br> <b>Phone:</b> +91 77220 40080</p>
+    </section>
+
+    <footer>
+        &copy; 2024 Khushii's-Kitchen. All rights reserved.
+    </footer>
+
+    <script>
+            function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        function submitForm(event) {
+            event.preventDefault();
+            // Add your form submission logic here, e.g., send data to a server or display a confirmation message
+            alert("Table booked successfully!");
+        }
+    </script>
+
+</body>
+
+</html>
